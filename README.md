@@ -1,0 +1,1 @@
+Practica de seccion de producto

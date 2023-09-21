@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.product-container {
+    display: flex;
+    width: 55%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.product-img {
+    width: 40%;
+}
+
+.product-description {
+    padding: 40px;
+}
+
+.product-description__title {
+    margin: 0 0 18px 0;
+    color: hsl(214, 17%, 51%);
+    font-weight: 700;
+}
+
+.product-description__text {
+    margin: 0 0 5px 0;
+    color: hsl(212, 23%, 69%);
+}
+
+.people-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.people-profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.people-profile__img {
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.people-profile__name {
+    margin-bottom: 0;
+    color: hsl(214, 17%, 51%);
+    font-weight: 700;
+}
+
+.people-profile__publication-date {
+    margin-top: 5px;
+    color: hsl(212, 23%, 69%);
+}
+
+.share-container {
+    position: relative;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8%;
+    height: 35px;
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.icon-share {
+    width: 14px;
+    height: 14px;
+}
+
+.share-panel {
+    position: absolute;
+    right: -93px;
+    top: -25px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    visibility: hidden;
+    background-color: rgb(72, 85, 106);
+    width: 50%;
+    height: 45px;
+    border-radius: 10px;
+    transition: 0.3s linear;
+}
+
+.share-panel::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+    right: 100px;
+    top: 30px;
+    transform: rotate(135deg);
+    width: 10%;
+    height: 20px;
+    background-color: rgb(72, 85, 106);
+}
+
+.active {
+    position: absolute;
+    top: -40px;
+    visibility: visible;
+    transition: 0.5s linear;
+}
+
+.contenido {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.share-panel__text {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 375px) {
+    .product-container {
+        flex-direction: column;
+        width: 90%;
+        height: 95%;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+    }
+
+    .product-img {
+        width: 100%;
+    }
+
+    .product-description {
+        padding: 0;
+    }
+
+    .people-profile {
+        padding: 0 40px;
+    }
+
+    .product-description__title {
+        padding: 40px 40px 0 40px;
+    }
+
+    .product-description__text {
+        padding:  0 40px;
+    }
+
+    .share-container {
+        width: 20%;
+    }
+
+    .share-panel {
+        position: absolute;
+        top: 2px;
+        right: -170px;
+        z-index: 1;
+        justify-content: initial;
+        padding-left: 40px;
+        box-sizing: border-box;
+        background-color: rgb(72, 85, 106);
+        width: 50%;
+        height: 81px;
+        visibility: visible;
+        border-radius: 0 0 10px 10px;
+        transition: 0.3s linear;
+    }
+
+    .share-panel::before {
+        content: none;
+    }
+
+    .active {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 100%;
+        height: 81px;
+        visibility: visible;
+        transition: 0.5s linear;
+    }
+
+    .icon {
+        margin: 0 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-container {
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .people-profile {
+        padding: 0 10px;
+        height: 81px;
+    }
+
+    .share-container {
+        width: 40px;
+    }
+
+    .icon-share {
+        width: 10px;
+        height: 10px;
+    }
+
+    .share-panel {
+        position: absolute;
+        top: 2px;
+        right: -250px;
+        z-index: 1;
+        justify-content: initial;
+        padding-left: 10px;
+        box-sizing: border-box;
+        background-color: rgb(72, 85, 106);
+        width: 50%;
+        height: 81px;
+        visibility: visible;
+        border-radius: 0 0 10px 10px;
+        transition: 0.3s linear;
+    }
+
+    .share-panel::before {
+        content: none;
+    }
+
+    .active {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 100%;
+        height: 81px;
+        visibility: visible;
+        transition: 0.5s linear;
+    }
+
+    .icon {
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .product-container {
+        width: 85%;
+    }
+}
+
